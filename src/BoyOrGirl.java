@@ -5,7 +5,7 @@ public class BoyOrGirl {
     public static void main(String[] args) {
         Scanner skait = new Scanner(System.in);
         String username = skait.nextLine();
-        kiekYraUnikaliuRaidziuZodyje(username);
+        System.out.println(" = " + kiekYraUnikaliuRaidziuZodyje(username));
         rezultatoIsvedimas(username);
     }
 
