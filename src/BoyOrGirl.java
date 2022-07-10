@@ -25,4 +25,13 @@ public class BoyOrGirl {
         }
         return kiekis;
     }
+
+    /**
+     * Patikrina ar skaičius lyginis
+     * @param x skaičiuss
+     * @return true, jei lyginis, false jeigu ne
+     */
+    public static boolean arLyginis(int x) {
+        return x % 2 == 0;
+    }
 }
