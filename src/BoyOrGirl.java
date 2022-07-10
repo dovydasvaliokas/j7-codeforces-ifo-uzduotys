@@ -1,12 +1,12 @@
+import java.util.Scanner;
+
 // https://codeforces.com/problemset/problem/236/A
 public class BoyOrGirl {
     public static void main(String[] args) {
-        System.out.println("kiekYraUnikaliuRaidziuZodyje(\"tvartas\") = " + kiekYraUnikaliuRaidziuZodyje("tvartas"));
-        System.out.println("kiekYraUnikaliuRaidziuZodyje(\"asdfg\") = " + kiekYraUnikaliuRaidziuZodyje("asdfg"));
-        System.out.println("kiekYraUnikaliuRaidziuZodyje(\"bananas\") = " + kiekYraUnikaliuRaidziuZodyje("bananas"));
-        System.out.println("kiekYraUnikaliuRaidziuZodyje(\"ananasas) = " + kiekYraUnikaliuRaidziuZodyje("ananasas"));
-
-
+        Scanner skait = new Scanner(System.in);
+        String username = skait.nextLine();
+        kiekYraUnikaliuRaidziuZodyje(username);
+        rezultatoIsvedimas(username);
     }
 
     /**
@@ -33,5 +33,19 @@ public class BoyOrGirl {
      */
     public static boolean arLyginis(int x) {
         return x % 2 == 0;
+    }
+
+
+    /**
+     * Išveda atitinkamą žinutę priklausosmai nuo gauto žodžio
+     * @param zodis žodis
+     */
+    public static void rezultatoIsvedimas(String zodis) {
+        if (arLyginis(kiekYraUnikaliuRaidziuZodyje(zodis))) {
+            System.out.println("IGNORE HIM!");
+        }
+        else {
+            System.out.println("CHAT WITH HER!");
+        }
     }
 }
